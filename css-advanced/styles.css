@@ -1,0 +1,70 @@
+/* MOBILE FIRST (DEFAULT) */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #555;
+}
+
+nav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+/* GRID LAYOUT */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background-color: lightblue;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* 📱 TABLET */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+/* 💻 DESKTOP */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+}
